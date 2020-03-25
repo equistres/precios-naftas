@@ -1,0 +1,80 @@
+.infoWindow {
+    background: #efefef;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.3;
+    margin: 0 auto 40px;
+    padding: 15px;
+    position: absolute;
+    min-width: 180px;
+    bottom: -19px;
+    left: -80px;
+    z-index: 1;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
+}
+
+.infoWindow p strong {
+    margin: -9px 0px 0px;
+    max-width: 180px;
+}
+.infoWindow p:last-of-type {
+    margin-bottom: 0;
+}
+
+.infoWindow::after {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #efefef;
+    bottom: -13px;
+    content: "";
+    position: absolute;
+    right: 89px;
+}
+
+.closeButtom{
+    background: none;
+    display: block;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    top: 2px;
+    right: 2px;
+}
+
+.markerComponent{
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    width: 54px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    cursor: help;
+}
+.gMapsLink{
+    text-align: center;
+}
+.menuContainer {
+    height: 60px;
+    z-index: 9999;
+    background-color: rgba(102, 102, 102, 0.8);
+    right: 0;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    margin: auto;
+    width: calc(100% - 28px);
+}
+.menu{
+    color:#fff;
+}
+
+.fuelType{
+    display: inline-block;    
+    padding: 0 10px 10px;
+}

@@ -1,0 +1,53 @@
+export const logoConfig = {
+    "22":"/images/agira.png",
+    "16":"/images/agsa.png",
+    "17":"/images/aspro.png",
+    "18":"/images/astra.png",
+    "26":"/images/axion.png",
+    "1":"/images/generico.png",
+    "21":"/images/camuzzi.png",
+    "15":"/images/generico.png",
+    "14":"/images/generico.png",
+    "10":"/images/generico.png",
+    "6":"/images/dapsa.png",
+    "5":"/images/eg3.png",
+    "3":"/images/esso.png",
+    "23":"/images/fox.png",
+    "24":"/images/oil.png",
+    "13":"/images/oronegro.png",
+    "27":"/images/pampa.png",
+    "25":"/images/pdv.png",
+    "19":"/images/pecom.png",
+    "20":"/images/puma.png",
+    "11":"/images/petroleradelplata.png",
+    "8":"/images/refinor.png",
+    "12":"/images/rhasa.png",
+    "4":"/images/shell.png",
+    "9":"/images/generico.png",
+    "7":"/images/sol.png",
+    "2":"/images/ypf.png",
+    "28":"/images/puma.png",
+    "29":"/images/gulf.png"
+};
+export const checkboxes = [
+    {
+      name: 'super',
+      key: '2',
+      label: 'Super',
+    },
+    {
+      name: 'premium',
+      key: '3',
+      label: 'Premium',
+    },
+    {
+      name: 'gasoil',
+      key: '19',
+      label: 'Gasoil',
+    },
+    {
+      name: 'gas',
+      key: '6',
+      label: 'Gas',
+    },
+];  
