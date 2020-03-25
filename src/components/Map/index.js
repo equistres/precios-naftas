@@ -7,7 +7,7 @@ import MapStyles from './MapStyles';
 import useMedia from 'use-media';
 import { logoConfig, checkboxes } from '../../static/common-configs';
 
-const SimpleMap = (props) =>{
+const SimpleMap = props =>{
     
     const { data, initialValues, setInitialValues } = props; 
 
@@ -35,7 +35,6 @@ const SimpleMap = (props) =>{
           selectedItem: 0
       });  
     };
-
     const handleClickChangeType = (id) =>{
         document.querySelectorAll('input[type=checkbox]').forEach(checkbox => {
             checkbox.checked = false;
@@ -45,35 +44,32 @@ const SimpleMap = (props) =>{
         checked.checked = true;
         setInitialValues({ url: `https://preciosensurtidor.minem.gob.ar/ws/rest/rest/server.php?method=getEmpresasAgrupadasBanderasCombustible&combustible=${id}&bounds={"so":{"lat":-34.67562659242818,"lng":-58.532635474890164},"ne":{"lat":-34.558088297983694,"lng":-58.24716260501712}}&banderas=["26","24","20","28","4","2"]` })
     }
-
-  
     
     let offerMarkers;
     if(data && data.resultados){
-
         const { resultados } = data;
         offerMarkers = resultados.map(station => {
             const showItem = parseInt(defaultProps.selectedItem)===parseInt(station.idempresa) ? true : false;
             const logo = logoConfig[station.idempresabandera] ? logoConfig[station.idempresabandera] : '/images/generico.png';
-          return(
-                <MarkerContainer 
-                    key={station.idempresa}
-                    lat={station.lat}
-                    lng={station.lon}
-                >
-                    <MarkerComponent
-                        data={station}
-                        logo={logo}
-                        handleClickOpenInfo={handleClickOpenInfo}
-                    />
-                    { showItem && 
-                        <MarkerInfo 
-                            data={station} 
-                            handleClickCloseInfo={handleClickCloseInfo} 
-                            isMobile={isMobile}
-                        /> 
-                    }
-                </MarkerContainer>
+            return(
+                    <MarkerContainer 
+                        key={station.idempresa}
+                        lat={station.lat}
+                        lng={station.lon}
+                    >
+                        <MarkerComponent
+                            data={station}
+                            logo={logo}
+                            handleClickOpenInfo={handleClickOpenInfo}
+                        />
+                        { showItem && 
+                            <MarkerInfo 
+                                data={station} 
+                                handleClickCloseInfo={handleClickCloseInfo} 
+                                isMobile={isMobile}
+                            /> 
+                        }
+                    </MarkerContainer>
             )
         });
       }

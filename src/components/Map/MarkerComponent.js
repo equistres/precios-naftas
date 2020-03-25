@@ -1,12 +1,11 @@
 import React from 'react'
 
 export default function MarkerComponent({data, logo, handleClickOpenInfo}) {
-const precios = Object.values(data.precios)[0];
-    debugger;
+    const precios = Object.values(data.precios)[0];
     return (
         <section onClick={()=>{handleClickOpenInfo(data)}}>
             <div className="markerComponent">
-                <img src={logo}/>
+                <img alt="logo" src={logo}/>
                 <b>{precios.precio}</b>
             </div>
         </section>
