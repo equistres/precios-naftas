@@ -72,9 +72,15 @@
 }
 .menu{
     color:#fff;
+    text-shadow: 1px 1px black; 
 }
 
 .fuelType{
     display: inline-block;    
     padding: 0 10px 10px;
+}
+
+.fuelType input[type='checkbox']{
+    width: 19px;
+    height: 19px;
 }
