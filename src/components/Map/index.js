@@ -13,14 +13,9 @@ const SimpleMap = props =>{
 
     const isMobile = !useMedia({minWidth: 1000});
     const heightMobile = isMobile ? { height: 'calc(100vh - 90px)', width: '100%', textAlign:'center' }:{ height: 'calc(100vh - 57px)', width: '100%', textAlign:'center' };
-
-    const [defaultProps, setDefaultProps] = useState({ 
-        center: { lat: -34.6325668, lng: -58.4009859 },
-        zoom: 15, 
-        maxZoom:16.5, 
-        minZoom:14.25,
-        selectedItem:0
-    });
+    const defaults = isMobile ? { center: { lat: -34.6325668, lng: -58.4009859 }, defaultZoom: 14, maxZoom:16.5, minZoom:14, selectedItem:0 } : { center: { lat: -34.6325668, lng: -58.4009859 }, defaultZoom: 15, maxZoom:16.5, minZoom:14, selectedItem:0 };
+    const [defaultProps, setDefaultProps] = useState(defaults);
+    
     const handleClickOpenInfo = (data) =>{
         setDefaultProps({
             ...defaultProps,
@@ -72,7 +67,7 @@ const SimpleMap = props =>{
                     </MarkerContainer>
             )
         });
-      }
+    }
     return(
         <div style={heightMobile}>
             <div className="menuContainer">
@@ -95,7 +90,7 @@ const SimpleMap = props =>{
                 bootstrapURLKeys={{
                     key: 'AIzaSyDfedLs3_WIi4ykM-8wfkUmOnrfmsb8hGM'
                 }}
-                zoom={defaultProps.zoom}
+                defaultZoom={defaultProps.defaultZoom}
                 options = {{maxZoom:defaultProps.maxZoom, minZoom:defaultProps.minZoom, gestureHandling:'greedy', styles:MapStyles}}
                 center={defaultProps.center}
             >
