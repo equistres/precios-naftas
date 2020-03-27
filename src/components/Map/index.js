@@ -59,7 +59,6 @@ const SimpleMap = props =>{
                     >
                         <MarkerComponent
                             data={station}
-                            logo={logo}
                             handleClickOpenInfo={handleClickOpenInfo}
                         />
                         { showItem && 
@@ -67,6 +66,7 @@ const SimpleMap = props =>{
                                 data={station} 
                                 handleClickCloseInfo={handleClickCloseInfo} 
                                 isMobile={isMobile}
+                                logo={logo}
                             /> 
                         }
                     </MarkerContainer>

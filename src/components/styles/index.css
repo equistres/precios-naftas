@@ -1,28 +1,59 @@
-.infoWindow {
+.markerComponent {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50% 50% 0;
+    background: #00cae9;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -54px 0 0 -14px;
+}
+.markerComponent:after {
+    content: "";
+    width: 34px;
+    height: 34px;
+    background: #e6e6e6;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    margin-left: -17px;
+}
+.price {
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 31px;
+    top: 8px;
+    font-size: 12px;
+    margin: 5px;
+    font-weight:bold;
+}
+.markerInfo {
     background: #efefef;
-    -webkit-border-radius: 4px;
+    border: 3px solid #00cae9;
     border-radius: 4px;
     font-size: 12px;
     line-height: 1.3;
-    margin: 0 auto 40px;
-    padding: 15px;
+    padding: 15px 15px 15px 15px;
     position: absolute;
     min-width: 180px;
-    bottom: -19px;
-    left: -80px;
+    bottom: 19px;
+    left: -103px;
     z-index: 1;
     box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
 }
 
-.infoWindow p strong {
+.markerInfo p strong {
     margin: -9px 0px 0px;
     max-width: 180px;
 }
-.infoWindow p:last-of-type {
+.markerInfo p:last-of-type {
     margin-bottom: 0;
 }
 
-.infoWindow::after {
+.markerInfo::after {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 20px solid #efefef;
@@ -43,18 +74,6 @@
     user-select: none;
     top: 2px;
     right: 2px;
-}
-
-.markerComponent{
-    box-sizing: border-box;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    width: 54px;
-    border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    cursor: help;
 }
 .gMapsLink{
     text-align: center;
@@ -84,3 +103,10 @@
     width: 19px;
     height: 19px;
 }
+
+body {
+    background: #e6e6e6;
+}
+  
+
+  
