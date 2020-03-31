@@ -72,7 +72,7 @@ const SimpleMap = props =>{
         <div style={heightMobile}>
             <div className="menuContainer">
                 <div className="menu">
-                    <div>Tipo de Combustible</div>
+                    <div>COMBUSTIBLE</div>
                     {
                         checkboxes.map((checkbox, key) => {
                             const checked = parseInt(checkbox.key)===parseInt(initialValues.id) ? true : false;
